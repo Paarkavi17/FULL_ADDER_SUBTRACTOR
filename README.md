@@ -38,18 +38,39 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+<img width="399" height="343" alt="image" src="https://github.com/user-attachments/assets/fc3ab060-87b6-4807-b341-762eca0d8496" />
+
+<img width="455" height="475" alt="image" src="https://github.com/user-attachments/assets/c5c1bbd6-15b2-4302-9b90-edc856e701ce" />
+
 **Procedure**
 
 Write the detailed procedure here
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:PAARKAVI A RegisterNumber:25012275
 */
+module e3(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^cin);
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+endmodule
+
+module DE3 (x,y,z,dif,bor);
+input x,y,z;
+output dif,bor;
+assign dif = x^y^z;
+assign bor = ~x&z | ~x&y | y&z;
+endmodule
 
 **RTL Schematic**
+<img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/88481980-c1f2-4301-afe1-8ed6fc8b3d34" />
+<img width="1920" height="1080" alt="Screenshot (26)" src="https://github.com/user-attachments/assets/a8703f68-36e8-40c4-a83d-3dc10f9255a1" />
 
 **Output Timing Waveform**
+<img width="1920" height="1080" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/f649e8df-f0d1-4b9e-82b7-bd4a83654a2c" />
+<img width="1920" height="1080" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/fb1e975b-5907-42c1-9969-bcfcc75d71a0" />
 
 **Result:**
 
